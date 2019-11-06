@@ -1,11 +1,14 @@
-val x: Unit = println(2)
+object Functions {
+  val x: Unit = println(2)                        //> 2
+                                                  //| x  : Unit = ()
 
-def printHello(i: String) = "Hello " + i
-printHello("Peggy")
+  def printHello(i: String) = "Hello " + i        //> printHello: (i: String)String
+  printHello("Peggy")                             //> res0: String = Hello Peggy
 
-def Hello = {
-  "Hello World"
+  def Hello = {
+    "Hello World"
+  }                                               //> Hello: => String
+  Hello                                           //> res1: String = Hello World
+  def add(x: Int, y: Int) = x + y                 //> add: (x: Int, y: Int)Int
+  add(8, 7)                                       //> res2: Int = 15
 }
-Hello
-def add(x: Int, y: Int) = x + y
-add(8, 7)
